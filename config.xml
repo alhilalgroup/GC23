@@ -2,7 +2,7 @@
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.gulfconstructiononline.app"
-    version     = "6.5.2" >
+    version     = "7.5.2" >
 
   <name>Gulf Construction</name>
 

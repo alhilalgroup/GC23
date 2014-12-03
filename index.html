@@ -45,11 +45,11 @@
 </head>
 <body>
 
-    <div data-role="page" data-theme='a'>
+  <div data-role="page" data-theme='a'>
 
         <div data-role="panel" data-display="push" id="sidebar" data-theme="a">
 
-            <img src="images/gulfconstructionlogo.png" />
+            <img src="images/gulfconstructionlogo.png"  />
             <br />
             <br />
 
@@ -57,77 +57,79 @@
                 <li><a href="index.html" data-ajax="false" class="ui-btn"><i class="fa fa-home fa-fw" style="width: 20px; text-align: right"></i>Home</a></li>
             </ul>
         </div>
+
+ 
+
         <div data-role="header" data-tap-toggle="false" data-theme='a'>
             <a href='#sidebar' data-role="none">
                 <img src="images/menu-icon.png" alt="sidebar" id="header-menu-icon" /></a>
             <h1 class="header-title">
-                <img src="images/gulfconstructionlogo.png" />
+                <img src="images/gulfconstructionlogo.png"  onclick="window.location.replace('index.html')" />
             </h1>
 
         </div>
 
-        
-        <div  data-role="content">
-                      <div id="loading" style="width: 16px; height: 16px;vertical-align:top; margin:50px;" class="clear;"><img src="images/loading.gif" /></div>
+
+        <div data-role="content">
+            <div id="loading" style="width: 16px; height: 16px; vertical-align: top; margin: 50px;" class="clear;">
+                <img src="images/loading.gif" /></div>
             <div id="disparea">
 
-            <div data-role="none" id="main-slider" class="owl-carousel">
+                <div data-role="none" id="main-slider" class="owl-carousel">
 
-                <div class="item">
-                    <div class="sliderimg">
-                    <img id="slideimg1" alt="" style="cursor: pointer">
+                    <div class="item">
+                        <div class="sliderimg">
+                            <img id="slideimg1" alt="" style="cursor: pointer">
                         </div>
-                    <div class="htext">
-                        <h2 id="slidetitle1" style="cursor: pointer"></h2>
+                        <div class="htext">
+                            <h2 id="slidetitle1" style="cursor: pointer"></h2>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="sliderimg">
+                            <img id="slideimg2" alt="" style="cursor: pointer">
+                        </div>
+                        <div class="htext">
+                            <h2 id="slidetitle2" style="cursor: pointer"></h2>
+
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="sliderimg">
+                            <img id="slideimg3" alt="" style="cursor: pointer">
+                        </div>
+                        <div class="htext">
+                            <h2 id="slidetitle3" style="cursor: pointer"></h2>
+
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="sliderimg">
+                            <img id="slideimg4" alt="" style="cursor: pointer">
+                        </div>
+                        <div class="htext">
+                            <h2 id="slidetitle4" style="cursor: pointer"></h2>
+
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="sliderimg">
-                    <img id="slideimg2" alt="" style="cursor: pointer">
-                        </div>
-                    <div class="htext">
-                        <h2 id="slidetitle2" style="cursor: pointer"></h2>
 
-                    </div>
+                <div id="homelist" data-role="listview" class="tanewslist">
+                </div>
+                <iframe class="left" scrolling="no" src="http://cdn.gulfconstructiononline.com/app/ads.html" frameborder="0" height="65px" width="100%"></iframe>
+
+                <div id="gc">
                 </div>
 
-                <div class="item">
-                    <div class="sliderimg">
-                    <img id="slideimg3" alt="" style="cursor: pointer">
-                        </div>
-                    <div class="htext">
-                        <h2 id="slidetitle3" style="cursor: pointer"></h2>
 
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="sliderimg">
-                    <img id="slideimg4" alt="" style="cursor: pointer">
-                        </div>
-                    <div class="htext">
-                        <h2 id="slidetitle4" style="cursor: pointer"></h2>
-
-                    </div>
-                </div>
-            </div>
-
-            <div id="homelist" data-role="listview" class="tanewslist">
-      
-            </div>
- <iframe class="left" scrolling="no"   src="http://cdn.gulfconstructiononline.com/app/ads.html" frameborder="0" height="65px" width="100%"></iframe>
-
-            <div id="gc">
-                
-            </div>
-
-
-            <iframe class="left" scrolling="no"   src="http://cdn.gulfconstructiononline.com/app/ads.html" frameborder="0" height="65px" width="100%"></iframe>
+                <iframe class="left" scrolling="no" src="http://cdn.gulfconstructiononline.com/app/ads.html" frameborder="0" height="65px" width="100%"></iframe>
                 <br class="clear" />
                 <div data-role="listview" style="background-color: #444; color: #999; font-size: 10px; padding: 5px 20px;">&copy; Al Hilal Group. &nbsp; &nbsp; &nbsp;Powered by Northstar Technologies.</div>
-        </div>
+            </div>
 
-        
+
         </div>
     </div>
 
@@ -237,52 +239,7 @@
 
         $(document).ready(function ($) {
 
-            "use strict";
-
-            var aSearchClicked = false;
-
-            jQuery(".sub-menu").hide();
-
-            if ("ontouchstart" in document.documentElement) {
-                jQuery(".menu-item-has-children").bind('touchstart touchon', function (event) {
-                    event.preventDefault();
-                    jQuery(this).children(".sub-menu").toggleClass("active").toggle(350);
-                    return false;
-                }).children(".sub-menu").children("li").bind('touchstart touchon', function (event) {
-                    window.location.href = jQuery(this).children("a").attr("href");
-                });
-                $('#a-search').bind('touchstart touchon', function (event) {
-                    if (aSearchClicked) {
-                        $('#searchform').removeClass('moved');
-                        aSearchClicked = false;
-                    }
-                    else {
-                        $('#searchform').addClass('moved');
-                        aSearchClicked = true;
-                    }
-                });
-            }
-            else {
-
-                jQuery(".menu-item-has-children").bind('click', function (event) {
-                    event.preventDefault();
-                    jQuery(this).children(".sub-menu").toggleClass("active").toggle(350);
-                    return false;
-                }).children(".sub-menu").children("li").bind('click', function (event) {
-                    window.location.href = jQuery(this).children("a").attr("href");
-                });
-                $('#a-search').bind('click', function (event) {
-                    if (aSearchClicked) {
-                        $('#searchform').removeClass('moved');
-                        aSearchClicked = false;
-                    }
-                    else {
-                        $('#searchform').addClass('moved');
-                        aSearchClicked = true;
-                    }
-                });
-
-            }
+          
 
             var time = 8; // time in seconds
 
