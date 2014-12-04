@@ -127,13 +127,13 @@
             var newslides = "";
             var goto = 0;
 
-            var morestories = "<br class='clear'><div style='color:white; background-color:red;padding:5px 10px;text-transform:uppercase;font-size:14px;font-weight:bold'>More Stories</div><br>"
+            var morestories = "<br class='clear'><div style='color:white; background-color:red;padding:5px 10px;text-transform:uppercase;font-size:16px;font-weight:bold'>More Stories</div><br>"
 
 
 
             $.getJSON('http://cdn.gulfconstructiononline.com/gcallArticles/' + querystring('id') + '/?jsoncallback=?', function (data) {
 
-                morestories += "<div style='padding:0 15px'><table style='font-size:14px'>";
+                morestories += "<div style='padding:0 15px'><table style='font-size:16px'>";
 
                 $.each(data, function (key, value) {
                     pageno++;
@@ -155,7 +155,7 @@
                         }
 
                         pagecontent += "<div style='font-size: 12px; text-align: center; color: #666'>" + data[key].caption + "</div>";
-                        pagecontent += "<div style='line-height: 16px; font-size: 14px;overflow:hidden'>" + data[key].atext + "</div>";
+                        pagecontent += "<div style='line-height: 16px; font-size: 16px;overflow:hidden'>" + data[key].atext + "</div>";
                         pagecontent += "</div>";
                         pagecontent += "</div>";
                         pagecontent += "</li>";

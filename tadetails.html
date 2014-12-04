@@ -141,7 +141,7 @@
 
             $.getJSON('http://cdn.gulfconstructiononline.com/TATopArticlesGCFull?jsoncallback=?', function (data) {
 
-                morestories += "<div style='padding:0 15px'><table style='font-size:14px'>";
+                morestories += "<div style='padding:0 15px'><table style='font-size:16px'>";
 
                 $.each(data, function (key, value) {
                     pageno++;
@@ -161,7 +161,7 @@
                         pagecontent += "<div id='posted' class='left' style='font-size: 12px; text-align: left; color: #666; margin: 5px 0px 10px 0px; padding: 0px;'>Posted on: " + data[key].datepublished + " </div>";
                         pagecontent += "<br style='clear:both'><img style='width:100%;' src='" + data[key].ImageFileNameSRC + "'>";
                         pagecontent += "<div style='font-size: 12px; text-align: center; color: #666'>" + data[key].caption + "</div>";
-                        pagecontent += "<div style='line-height: 16px; font-size: 14px;overflow:hidden'>" + data[key].aText + "</div>";
+                        pagecontent += "<div style='line-height: 15px; font-size: 16px;overflow:hidden'>" + data[key].aText + "</div>";
                         pagecontent += "</div>";
                         pagecontent += "</div>";
                         pagecontent += "</li>";
