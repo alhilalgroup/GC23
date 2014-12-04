@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <script src="js/jquery-2.1.1.min.js"></script>
     <!-- jQueryMobileCSS - styling-->
-    <link rel="stylesheet" href="css/jqeury.mobile.theme.min.css" />
 
     <!-- jQueryMobile icons -->
     <link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
@@ -39,28 +38,34 @@
     <script src="js/owl.carousel.min.js"></script>
 
 
-
+    <style>
+         a {text-decoration:none;}
+    </style>
 
 
 </head>
 <body>
 
-  <div data-role="page" data-theme='a'>
-
-        <div data-role="panel" data-display="push" id="sidebar" data-theme="a">
-
-            <img src="images/gulfconstructionlogo.png"  />
-            <br />
-            <br />
-
-            <ul id="menu" data-role="listview" data-inset="false" data-icon="false" data-divider-theme="" class="ui-listview" style="text-align: left">
-                <li><a href="index.html" data-ajax="false" class="ui-btn"><i class="fa fa-home fa-fw" style="width: 20px; text-align: right"></i>Home</a></li>
-            </ul>
-        </div>
 
  
 
-        <div data-role="header" data-tap-toggle="false" data-theme='a'>
+
+  <div data-role="page"   style="background-color:#e30613">
+
+         <div data-role="panel" data-display="push" id="sidebar" data-theme="a"  >
+
+        <img src="images/gulfconstructionlogo.png" />
+        <br />
+        <br />
+
+        <ul id="menu" data-role="listview" data-inset="false" data-icon="false" data-divider-theme="" class="ui-listview" style="text-align: left;  ">
+            <li><a href="index.html" data-ajax="false" class="ui-btn"><i class="fa fa-home fa-fw" style="width: 20px; text-align: right"></i>Home</a></li>
+        </ul>
+    </div>
+
+ 
+
+        <div data-role="header">
             <a href='#sidebar' data-role="none">
                 <img src="images/menu-icon.png" alt="sidebar" id="header-menu-icon" /></a>
             <h1 class="header-title">
@@ -70,7 +75,7 @@
         </div>
 
 
-        <div data-role="content">
+        <div data-role="content" style="background-color:white">
             <div id="loading" style="width: 16px; height: 16px; vertical-align: top; margin: 50px;" class="clear;">
                 <img src="images/loading.gif" /></div>
             <div id="disparea">
